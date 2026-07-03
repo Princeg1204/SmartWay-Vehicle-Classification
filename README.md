@@ -167,6 +167,23 @@ The Random Forest model identified the following features as the most influentia
 - Cylinders
 
 ---
+## 📊 Model Performance
+
+### Confusion Matrix
+
+![Confusion Matrix](SmartWay-Vehicle-Classification/outputs/confusion_matrix.png)
+
+---
+
+### ROC Curve
+
+![ROC Curve](SmartWay-Vehicle-Classification/outputs/roc_curve.png)
+
+---
+
+### Feature Importance
+
+![Feature Importance](SmartWay-Vehicle-Classification/outputs/feature_importance.png)
 
 # 📂 Project Structure
 
