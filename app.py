@@ -226,9 +226,9 @@ import joblib
 # LOAD TRAINED PIPELINE
 # ------------------------------------------------------------------------------
 
-MODEL_PATH = Path("models") / "smartway_pipeline.pkl"
+MODEL_PATH = Path("models") / "smartway_random_forest_model.pkl"
 
-pipeline = joblib.load(MODEL_PATH)
+model = joblib.load(MODEL_PATH)
 
 # ------------------------------------------------------------------------------
 # DROPDOWN OPTIONS
