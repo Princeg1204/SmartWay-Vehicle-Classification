@@ -25,7 +25,7 @@ st.set_page_config(
 # LOAD ML PIPELINE
 # ------------------------------------------------------------------------------
 
-MODEL_PATH = Path("models") / "smartway_pipeline.pkl"
+MODEL_PATH = Path("models") / "smartway_random_forest_model.pkl"
 
 try:
 
