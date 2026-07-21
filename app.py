@@ -974,9 +974,9 @@ if analyze:
     # PREDICTION
     # --------------------------------------------------------------------------
 
-    prediction = pipeline.predict(input_data)[0]
+    prediction = model.predict(input_data)[0]
 
-    probability = pipeline.predict_proba(input_data)[0]
+    probability = model.predict_proba(input_data)[0]
 
     confidence = round(max(probability) * 100, 2)
 
