@@ -1,170 +1,80 @@
 # 🚗 SmartWay Vehicle Classification using Machine Learning
 
-![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-orange?logo=scikitlearn)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-green?logo=pandas)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
+> An end-to-end Machine Learning web application that predicts whether a vehicle qualifies as an **EPA SmartWay Certified Vehicle** using environmental and vehicle specifications.
 
-## 📌 Project Overview
+![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?logo=scikitlearn)
+![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-red?logo=streamlit)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-blue?logo=pandas)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-This project analyzes the **EPA Fuel Economy Dataset (2008–2018)** and builds a Machine Learning model to classify whether a vehicle is **SmartWay Certified**.
+---
 
-The project covers the complete Machine Learning pipeline including:
+# 📌 Project Overview
 
+This project is an **End-to-End Machine Learning Application** developed using **Python, Scikit-learn, and Streamlit**.
+
+The application predicts whether a vehicle is **EPA SmartWay Certified** based on important environmental and vehicle-related features.
+
+The project covers the complete Machine Learning workflow:
+
+- Data Collection
 - Exploratory Data Analysis (EDA)
-- Data Cleaning & Preprocessing
+- Data Cleaning
 - Feature Engineering
 - Feature Encoding
 - Model Training
 - Model Evaluation
-- Feature Importance Analysis
-- Model Saving
+- Model Deployment
+- Interactive Streamlit Web Application
 
 ---
 
-# 🎯 Objectives
+# ✨ Features
 
-The project answers the following questions:
+✅ Premium Streamlit User Interface
 
-- Has fuel economy improved over the years?
-- What characteristics are associated with better fuel economy?
-- Can a vehicle be classified as SmartWay certified using Machine Learning?
+✅ Real-Time Vehicle Prediction
 
----
+✅ Machine Learning Pipeline
 
-# 📊 Dataset Information
+✅ Prediction Confidence Score
 
-**Source:** EPA Fuel Economy Dataset
+✅ AI-Based Prediction Explanation
 
-Years Covered:
+✅ Eco Score Calculation
 
-- 2008
-- 2009
-- 2010
-- 2011
-- 2012
-- 2013
-- 2014
-- 2015
-- 2016
-- 2017
-- 2018
+✅ Vehicle Summary Dashboard
 
-Final Dataset
-
-- **Rows:** 26,241
-- **Columns:** 16
+✅ Download Prediction Report (CSV)
 
 ---
 
-# 🛠 Technologies Used
+# 🌐 Live Demo
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Scikit-Learn
-- Joblib
-- Google Colab
+**Coming Soon**
+
+*(Streamlit Cloud deployment will be added here.)*
 
 ---
 
-# 📈 Exploratory Data Analysis
+## 📷 Application Preview
 
-The following analyses were performed:
+### Home Page
 
-- Fuel Economy Trend (2008–2018)
-- SmartWay Vehicle Analysis
-- Vehicle Class vs MPG
-- Fuel Type vs Fuel Economy
-- Engine Size vs MPG
-- Cylinder Count vs MPG
-- Drive Type vs Fuel Economy
-- Correlation Analysis
+> ![Home Page](home_page.png)
 
 ---
 
-# 🧹 Data Preprocessing
+### Prediction Result
 
-The preprocessing pipeline includes:
-
-- Finding common columns across all datasets
-- Standardizing categorical values
-- Converting numeric columns
-- Handling missing values
-- Removing duplicates
-- Merging all yearly datasets
-- Dataset quality verification
+> ![Prediction Result](prediction_result.png)
 
 ---
 
-# ⚙ Feature Engineering
+### AI Explanation Dashboard
 
-The following feature engineering steps were performed:
-
-- SmartWay label standardization
-- Binary target creation
-- Feature selection
-- One-Hot Encoding
-- Feature scaling using StandardScaler
-
-Removed identifier columns:
-
-- Model
-- Underhood ID
-
----
-
-# 🤖 Machine Learning Models
-
-Three classification models were trained.
-
-| Model | Accuracy | Precision | Recall | F1 Score |
-|--------|----------|-----------|---------|----------|
-| Logistic Regression | **99.47%** | 98.44% | 99.13% | 98.78% |
-| Decision Tree | **99.79%** | 99.39% | 99.65% | 99.52% |
-| Random Forest | **99.68%** | 99.30% | 99.21% | 99.26% |
-
----
-
-# 📉 ROC-AUC Scores
-
-| Model | ROC-AUC |
-|---------|----------|
-| Logistic Regression | **0.9994** |
-| Decision Tree | **0.9974** |
-| Random Forest | **0.9998** |
-
----
-
-# ⭐ Best Model
-
-Although all models performed exceptionally well, **Random Forest** was selected as the final model because of its strong overall performance and robustness.
-
-Saved Model:
-
-- `smartway_random_forest_model.pkl`
-
-Saved Scaler:
-
-- `feature_scaler.pkl`
-
----
-
-# 📊 Top Important Features
-
-The Random Forest model identified the following features as the most influential:
-
-- Greenhouse Gas Score
-- Combined MPG
-- Highway MPG
-- City MPG
-- Air Pollution Score
-- Year
-- Engine Displacement
-- Cylinders
+> ![AI Explanation Dashboard](AI_Explanation_Dashboard.png)
 
 ---
 ## 📊 Model Performance
@@ -185,43 +95,164 @@ The Random Forest model identified the following features as the most influentia
 
 ![Feature Importance](SmartWay-Vehicle-Classification/outputs/feature_importance.png)
 
-# 📂 Project Structure
+
+# 📊 Dataset Information
+
+**Dataset Source**
+
+EPA Fuel Economy Dataset (2008–2018)
+
+Dataset Size
+
+- **Rows:** 26,241
+- **Columns:** 16
+
+Target Variable
+
+- SmartWay Certification
+
+---
+
+# 🛠 Tech Stack
+
+### Programming Language
+
+- Python
+
+### Libraries
+
+- Pandas
+- NumPy
+- Scikit-learn
+- Joblib
+- Streamlit
+- Matplotlib
+
+### Machine Learning
+
+- Logistic Regression
+- Decision Tree
+- Random Forest
+
+---
+
+# ⚙ Machine Learning Pipeline
+
+The project follows an end-to-end deployment pipeline.
 
 ```
-SmartWay-Vehicle-Classification/
-
-│
-
-├── data/
-│ ├── smartway_cleaned_dataset.csv
-│ └── smartway_ml_dataset.csv
-
-├── models/
-│ ├── smartway_random_forest_model.pkl
-│ └── feature_scaler.pkl
-
-├── notebook/
-│ └── FuelEconomyProject.ipynb
-
-├── outputs/
-│ ├── confusion_matrix.png
-│ ├── roc_curve.png
-│ ├── feature_importance.png
-│ └── model_comparison.csv
-
-├── requirements.txt
-
-└── README.md
+Input Features
+       │
+       ▼
+Data Preprocessing
+       │
+       ▼
+Feature Encoding
+       │
+       ▼
+Standardization
+       │
+       ▼
+Random Forest Model
+       │
+       ▼
+Prediction
+       │
+       ▼
+SmartWay Classification
 ```
 
 ---
 
-# 🚀 How to Run
+# 🚘 Input Features
+
+The prediction model uses the following features:
+
+- Air Pollution Score
+- City MPG
+- Combined MPG
+- Cylinders
+- Engine Displacement
+- Drive Type
+- Fuel Type
+- Greenhouse Gas Score
+- Highway MPG
+- Emission Standard
+- Transmission
+- Vehicle Class
+- Model Year
+
+---
+
+# 🤖 Machine Learning Models
+
+| Model | Accuracy |
+|---------|----------|
+| Logistic Regression | 99.47% |
+| Decision Tree | 99.79% |
+| Random Forest | 99.68% |
+
+### Final Selected Model
+
+✅ Random Forest Classifier
+
+---
+
+# 📈 Model Performance
+
+The project includes:
+
+- Confusion Matrix
+- ROC Curve
+- Feature Importance Analysis
+- Model Comparison
+
+---
+
+# 📂 Project Structure
+
+```text
+SmartWay-Vehicle-Classification/
+
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+│
+├── data/
+│   ├── smartway_cleaned_dataset.csv
+│   └── smartway_ml_dataset.csv
+│
+├── models/
+│   ├── smartway_pipeline.pkl
+│   ├── smartway_random_forest_model.pkl
+│   └── feature_scaler.pkl
+│
+├── notebook/
+│   └── FuelEconomyProject.ipynb
+│
+├── outputs/
+│   ├── confusion_matrix.png
+│   ├── feature_importance.png
+│   ├── roc_curve.png
+│   └── model_comparison.csv
+```
+
+---
+
+# 🚀 Installation
 
 Clone the repository
 
 ```bash
 git clone https://github.com/Princeg1204/SmartWay-Vehicle-Classification.git
+```
+
+Go to project directory
+
+```bash
+cd SmartWay-Vehicle-Classification
 ```
 
 Install dependencies
@@ -230,42 +261,35 @@ Install dependencies
 pip install -r requirements.txt
 ```
 
-Open the notebook
+Run the Streamlit application
 
+```bash
+streamlit run app.py
 ```
-FuelEconomyProject.ipynb
-```
-
-Run all cells.
 
 ---
 
 # 📁 Outputs
 
-The project generates:
+The application provides
 
-- Cleaned Dataset
-- Machine Learning Dataset
-- Model Comparison CSV
-- Confusion Matrix
-- ROC Curve
-- Feature Importance Plot
-- Trained Random Forest Model
-- Feature Scaler
+- SmartWay Prediction
+- Prediction Confidence
+- AI Explanation
+- Eco Score
+- Vehicle Summary
+- Downloadable CSV Report
 
 ---
 
-# 📌 Future Improvements
+# 🔮 Future Improvements
 
-Possible future enhancements include:
-
-- Hyperparameter Tuning
-- XGBoost
-- LightGBM
-- Deep Learning Models
-- Streamlit Deployment
-- Flask/FastAPI Deployment
 - SHAP Explainability
+- Docker Deployment
+- AWS Deployment
+- XGBoost Implementation
+- LightGBM Model
+- Model Monitoring Dashboard
 
 ---
 
@@ -273,9 +297,20 @@ Possible future enhancements include:
 
 **Prince Gajera**
 
+AI & Machine Learning Enthusiast
+
 GitHub:
+
 https://github.com/Princeg1204
+
+LinkedIn:
+
+https://www.linkedin.com/in/princegajera/
+
+Portfolio:
+
+https://6a2e92fe1463d6dacab32517--my-portfolio-0412.netlify.app/
 
 ---
 
-## ⭐ If you found this project useful, consider giving it a Star!
+## ⭐ If you found this project useful, don't forget to Star the repository.
