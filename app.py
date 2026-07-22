@@ -25,7 +25,7 @@ st.set_page_config(
 # LOAD ML PIPELINE
 # ------------------------------------------------------------------------------
 
-MODEL_PATH = Path("models") / "smartway_random_forest_model.pkl"
+MODEL_PATH = Path("models") / "smartway_pipeline.pkl"
 
 try:
 
@@ -974,9 +974,9 @@ if analyze:
     # PREDICTION
     # --------------------------------------------------------------------------
 
-    prediction = model.predict(input_data)[0]
+    prediction = pipeline.predict(input_data)[0]
 
-    probability = model.predict_proba(input_data)[0]
+    probability = pipeline.predict_proba(input_data)[0]
 
     confidence = round(max(probability) * 100, 2)
 
