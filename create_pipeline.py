@@ -1,3 +1,8 @@
+import sklearn
+print("=" * 50)
+print("Scikit-learn Version:", sklearn.__version__)
+print("=" * 50)
+
 import pandas as pd
 import joblib
 
