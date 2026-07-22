@@ -1,5 +1,11 @@
 # 🚗 SmartWay Vehicle Classification using Machine Learning
 
+## 🌐 Live Demo
+
+https://smartway-vehicle-classification-6mkyupxzexwkfucf34bcbq.streamlit.app
+
+---
+
 > An end-to-end Machine Learning web application that predicts whether a vehicle qualifies as an **EPA SmartWay Certified Vehicle** using environmental and vehicle specifications.
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
@@ -47,14 +53,6 @@ The project covers the complete Machine Learning workflow:
 ✅ Vehicle Summary Dashboard
 
 ✅ Download Prediction Report (CSV)
-
----
-
-# 🌐 Live Demo
-
-**Coming Soon**
-
-*(Streamlit Cloud deployment will be added here.)*
 
 ---
 
